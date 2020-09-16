@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>씌알유디 연습</title>
+</head>
+
+<body>
+    <h1>CRUD 방식</h1>
+    <a href="{% url 'read' %}">Class Based CRUD</a> <br><br>
+    <br><br>
+    
+    <h1>세션 로그인</h1>
+    {% if request.session.user %}
+    <a href="{% url 'logout' %}">로그아웃</a>
+    {% else %}
+    <a href="{% url 'login' %}">로그인</a>
+    <a href="{% url 'register' %}">회원가입</a>
+    {% endif %}
+
+</body>
+
+</html>
